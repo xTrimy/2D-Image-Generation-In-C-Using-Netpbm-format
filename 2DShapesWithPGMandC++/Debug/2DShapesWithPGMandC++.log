@@ -1,5 +1,8 @@
-﻿  2DShapesWithPGMandC++.cpp
-c:\users\pc\source\repos\2dimagegeneration-in-cpp-using-netpbm\2dshapeswithpgmandc++\2dshapeswithpgmandc++.cpp(65): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\pc\source\repos\2dimagegeneration-in-cpp-using-netpbm\2dshapeswithpgmandc++\2dshapeswithpgmandc++.cpp(76): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\pc\source\repos\2dimagegeneration-in-cpp-using-netpbm\2dshapeswithpgmandc++\2dshapeswithpgmandc++.cpp(78): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+﻿  pch.cpp
+  2DShapesWithPGMandC++.cpp
+  Shapes.cpp
+c:\users\pc\source\repos\2dimagegeneration-in-cpp-using-netpbm\2dshapeswithpgmandc++\shapes.cpp(27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\pc\source\repos\2dimagegeneration-in-cpp-using-netpbm\2dshapeswithpgmandc++\shapes.cpp(38): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\pc\source\repos\2dimagegeneration-in-cpp-using-netpbm\2dshapeswithpgmandc++\shapes.cpp(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
   2DShapesWithPGMandC++.vcxproj -> C:\Users\PC\source\repos\2DImageGeneration-In-cpp-using-netpbm\Debug\2DShapesWithPGMandC++.exe
