@@ -1,10 +1,10 @@
 # 2D-Image-Generation-In-C-Using-Netpbm-format
 This is a test project where image generation is done in C++ using portable grey maps (PGM) File Formats as it's the easiest file format to be written using a low level language like C++
 
-PGM FIle format consists of a header of *usually* 3 lines
-First line is a *string* identifies the file format (**P3**)
-second line is the size of the image
-third line is the maximum value of the color range
+PGM FIle format consists of a header of *usually* 3 lines<br>
+First line is a *string* identifies the file format (**P3**)<br>
+Second line is the size of the image<br>
+Third line is the maximum value of the color range
 
 **Example of a PGM image:**
 
