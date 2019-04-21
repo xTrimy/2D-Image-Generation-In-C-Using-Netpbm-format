@@ -12,4 +12,6 @@
 // TODO: add headers that you want to pre-compile here
 #include <iostream>
 #include <fstream>
+#include <time.h>
+
 #endif //PCH_H
