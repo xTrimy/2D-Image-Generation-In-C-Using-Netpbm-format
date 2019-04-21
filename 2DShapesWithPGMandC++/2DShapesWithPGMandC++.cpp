@@ -5,6 +5,7 @@
 std::ofstream file("imgs.pgm");
 const int height = 100, width = 100;
 int X[height][width];
+int oldX[height][width];
 int strokeC = 0;
 int fillC = 100;
 int strokeW = 1;
@@ -17,6 +18,7 @@ void fill(int);
 void stroke(int);
 void strokeWeight(int);
 void setAntiAliasing(bool);
+void oldCopy();
 
 void background(int);
 void draw();
@@ -55,6 +57,9 @@ void rectStroke(int x, int y, int sx, int sy) {
 	}
 }
 void circle(int x, int y, int r) {
+	if (antialiasing) {
+		oldCopy();
+	}
 	for (int i = 0; i < width; i++) {
 		for (int j = 0; j < height; j++) {
 			float cr = sqrt(pow((i - x), 2) + pow((j - y), 2));
@@ -70,7 +75,7 @@ void circleStroke(int x, int y, int r) {
 		for (int j = 0; j < height; j++) {
 			float cr = sqrt(pow((i - x), 2) + pow((j - y), 2));
 			if (r - cr >= 0 && r - cr <= strokeW) {
-				X[j][i] = strokeC + ((antialiasing) ? (100 - 100 * (r - cr)) : 0);
+				X[j][i] = strokeC + ((antialiasing) ? ((oldX[j][i] - 100 * (r - cr) <= 0)?0: oldX[j][i] - 100 * (r - cr)) : 0);
 			}
 		}
 	}
@@ -83,8 +88,6 @@ void background(int x) {
 	}
 }
 void draw() {
-
-
 	for (int i = 0; i < width; i++) {
 		for (int j = 0; j < height; j++) {
 			file << X[j][i] << " ";
@@ -104,4 +107,12 @@ void strokeWeight(int x) {
 }
 void setAntiAliasing(bool x) {
 	antialiasing = x;
+}
+
+void oldCopy() {
+	for (int i = 0; i < width; i++) {
+		for (int j = 0; j < height; j++) {
+			oldX[j][i] = X[j][i];
+		}
+	}
 }
